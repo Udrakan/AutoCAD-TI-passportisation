@@ -1,6 +1,6 @@
 ;program pro upravu podkladu PVK
 (vl-load-com)
-(defun c:pvkc (/ i vymenahl filtr)
+(defun c:pvkc (/ i vymenahl filtr sbl)
 (load "bloky" "\bloky not loaded")
 (load "hladiny" "\nLispfile2 not loaded")
 (load "modifikujobj" "\nLispfile3 not loaded")
@@ -53,7 +53,23 @@
 (NastavHlad nastavenihl)
 )
 
-;importuj bloky
+;vymen bloky
+(setq sbl 	'(
+	("VPUST#*" 	. "VPUST")
+			)
+)
+(lVymenBl sbl)
+
+;vloz na bloky
+(setq sbl 	'(
+	("HYDRAN#*" 	. "hydrant")
+	("ZASLEP#*" 	. "ZAS")
+			)
+)
+(lVlozNaBl sbl)
+
+
+
 
 
 
