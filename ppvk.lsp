@@ -56,14 +56,14 @@
 ;vymen bloky
 (setq sbl 	'(
 	("VPUST#*" 	. "VPUST")
+	("HYDRAN#*" 	. "hydrant")
 			)
 )
 (lVymenBl sbl)
 
 ;vloz na bloky
 (setq sbl 	'(
-	("HYDRAN#*" 	. "hydrant")
-	("ZASLEP#*" 	. "ZAS")
+	("ZASLEP,ZASLEP#*" 	. "ZAS")
 			)
 )
 (lVlozNaBl sbl)
