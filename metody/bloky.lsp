@@ -85,3 +85,5 @@
 	)
     (setq i (1+ i)))
  )
+
+;todo: vymaz seznam bloku

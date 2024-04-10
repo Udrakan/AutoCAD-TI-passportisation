@@ -19,35 +19,35 @@
 ;zmen hladiny objektu
   
 (setq vymenahl '(
-	("20" 44 "Continuous" . "S_PVK_kanalizace_jednotná")
-	("20" 44 "DGN3" . "S_PVK_kanalizace_jednotná_nezamìøeno")
-	("49" 44 "DGN2" . "S_PVK_kanalizace_pøípojky")
-	("49" 253 "DGN2" . "S_PVK_kanalizace_pøípojky")
-	("49" 162 "DGN2" . "S_PVK_kanalizace_dešová_pøípojky")
-	("49" 172 "DGN2" . "S_PVK_kanalizace_dešová_pøípojky")
-	("20" 5 "Continuous" . "S_PVK_kanalizace_dešovo")
-	("20" 5 "DGN3" . "S_PVK_kanalizace_dešová_nezamìøeno")
-	("8" 92 "Continuous" . "S_PVK_vodovod")
-	("8" 96 "Continuous" . "S_PVK_vodovod")
-	("8" 12 "Continuous" . "S_PVK_vodovod_mimo provoz")
-	("8" 96 "DGN2" . "S_PVK_vodovod_nezamìøeno")
+	("20" 44 "Continuous" 	. "S_PVK_kanalizace_jednotná")
+	("20" 44 "DGN3" 	. "S_PVK_kanalizace_jednotná_nezamìøeno")
+	("49" 44 "DGN2" 	. "S_PVK_kanalizace_pøípojky")
+	("49" 253 "DGN2" 	. "S_PVK_kanalizace_pøípojky")
+	("49" 162 "DGN2" 	. "S_PVK_kanalizace_dešová_pøípojky")
+	("49" 172 "DGN2" 	. "S_PVK_kanalizace_dešová_pøípojky")
+	("20" 5 "Continuous" 	. "S_PVK_kanalizace_dešovo")
+	("20" 5 "DGN3" 		. "S_PVK_kanalizace_dešová_nezamìøeno")
+	("8" 92 "Continuous" 	. "S_PVK_vodovod")
+	("8" 96 "Continuous" 	. "S_PVK_vodovod")
+	("8" 12 "Continuous" 	. "S_PVK_vodovod_mimo provoz")
+	("8" 96 "DGN2" 		. "S_PVK_vodovod_nezamìøeno")
 				)
 	)
 (PrevedHlad vymenahl)
 
 ;nastav vlastnosti hladin
 (setq nastavenihl 	'(
-	(30 "_KANALIZACE_JEDNOTNA_PODZ" . 	"S_PVK_kanalizace_jednotná")
-	(30 "_KANALIZACE_JEDNOTNA_NADZ" . 	"S_PVK_kanalizace_jednotná_nezamìøeno")
-	(30 "_KANALIZACE_PODZ" 		. 	"S_PVK_kanalizace_pøípojky")
-	(30 "_KANALIZACE_NADZ" 		. 	"S_PVK_kanalizace_pøípojky_nezamìøeno")
-	(5 "_KANALIZACE_JEDNOTNA_PODZ" 	. 	"S_PVK_kanalizace_dešovo")
-	(5 "_KANALIZACE_JEDNOTNA_NADZ" 	. 	"S_PVK_kanalizace_dešová_nezamìøeno")
-	(5 "_KANALIZACE_PODZ" 		. 	"S_PVK_kanalizace_dešová_pøípojky")
-	(5 "_KANALIZACE_NADZ" 		. 	"S_PVK_kanalizace_dešová_pøípojky")
-	(3 "_VODOVOD_PODZ" 		. 	"S_PVK_vodovod")
-	(3 "_VODOVOD_NADZ" 		. 	"S_PVK_vodovod_nezamìøeno")
-	(2 "VODOVOD_ZRUSENY" 		. 	"S_PVK_vodovod_mimo provoz")
+	(30 "_KANALIZACE_JEDNOTNA_PODZ" . "S_PVK_kanalizace_jednotná")
+	(30 "_KANALIZACE_JEDNOTNA_NADZ" . "S_PVK_kanalizace_jednotná_nezamìøeno")
+	(30 "_KANALIZACE_PODZ" 		. "S_PVK_kanalizace_pøípojky")
+	(30 "_KANALIZACE_NADZ" 		. "S_PVK_kanalizace_pøípojky_nezamìøeno")
+	(5 "_KANALIZACE_JEDNOTNA_PODZ" 	. "S_PVK_kanalizace_dešovo")
+	(5 "_KANALIZACE_JEDNOTNA_NADZ" 	. "S_PVK_kanalizace_dešová_nezamìøeno")
+	(5 "_KANALIZACE_PODZ" 		. "S_PVK_kanalizace_dešová_pøípojky")
+	(5 "_KANALIZACE_NADZ" 		. "S_PVK_kanalizace_dešová_pøípojky")
+	(3 "_VODOVOD_PODZ" 		. "S_PVK_vodovod")
+	(3 "_VODOVOD_NADZ" 		. "S_PVK_vodovod_nezamìøeno")
+	(2 "VODOVOD_ZRUSENY" 		. "S_PVK_vodovod_mimo provoz")
 			)
 )
 (NastavHlad nastavenihl)
@@ -55,9 +55,11 @@
 
 ;vymen bloky
 (setq sbl 	'(
-	("VPUST#*" 	. "VPUST")
-	("HYDRAN#*" 	. "hydrant")
-			)
+	("VPUST*" 	. "VPUST")
+	("HYDRAN*" 	. "hydrant")
+	("UZAV*" 	. "psoup")
+	("SACHTA*" 	. "psach")
+	("ZASLEP*" 	. "ZAS")		)
 )
 (lVymenBl sbl)
 
@@ -66,7 +68,9 @@
 	("ZASLEP,ZASLEP#*" 	. "ZAS")
 			)
 )
-(lVlozNaBl sbl)
+
+
+;vymaz bloky
 
 
 
